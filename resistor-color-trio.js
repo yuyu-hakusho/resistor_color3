@@ -23,7 +23,7 @@ export function decodedResistorValue(colorsArray) {
 
     let resistance = (num1 * 10 + num2) * Math.pow(10, numZeroes); //converts num1 and num2 into a single number, then multiplies it by however many 10s to essentially add the zeroes
 
-    if (resistance >= 1000) {
+    if (resistance >= 1000) { //checks to see if it's greater than 1K, if so, then it truncates the 3 zeroes and then adds 'kiloohms'
         return resistance/1000 + " kiloohms";
     }
     else {
